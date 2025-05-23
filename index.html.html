@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoRaíz - Educamos Sembrando el Futuro</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f4f4; }
+        header, footer { background: #4CAF50; color: white; padding: 1em 0; text-align: center; position: relative; overflow: hidden; }
+        nav { background: #388E3C; text-align: center; padding: 1em 0; }
+        nav a { color: white; text-decoration: none; margin: 0 1em; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+        .container { padding: 2em; max-width: 1000px; margin: auto; background: white; }
+        img { max-width: 100%; height: auto; margin: 1em 0; border-radius: 8px; }
+        h1, h2, h3 { color: #2e7d32; }
+        form { background: #f9f9f9; padding: 1em; border-radius: 5px; margin-top: 2em; }
+        input, textarea { width: 100%; padding: 0.8em; margin: 0.5em 0; border: 1px solid #ccc; border-radius: 4px; }
+        button { background-color: #4CAF50; color: white; border: none; padding: 0.8em 1.5em; cursor: pointer; border-radius: 4px; transition: background 0.3s ease, transform 0.2s ease; }
+        button:hover { background-color: #45a049; transform: scale(1.05); }
+        .logo { max-height: 80px; animation: floatIn 1s ease forwards; opacity: 0; }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1em; margin: 2em 0; }
+        .gallery img { width: 100%; border-radius: 8px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .gallery img:hover { transform: scale(1.05); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); }
+        @keyframes floatIn {
+            0% { transform: translateY(-20px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const links = document.querySelectorAll("nav a");
+            links.forEach(link => {
+                link.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <img src="https://example.com/logo-ecoraiz.png" alt="Logo EcoRaíz" class="logo">
+        <h1>EcoRaíz</h1>
+        <p>Educamos sembrando el futuro</p>
+    </header>
+
+    <nav>
+        <a href="#proposito">Propósito</a>
+        <a href="#productos">Productos</a>
+        <a href="#valores">Valores</a>
+        <a href="#prototipo">Prototipo</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="container">
+        <h2 id="proposito">Propósito de la Organización</h2>
+        <p>Democratizamos el acceso a materiales escolares sostenibles, especialmente en comunidades con recursos limitados, promoviendo una educación de calidad, inclusiva y ambientalmente responsable.</p>
+        <div class="gallery">
+            <img src="https://example.com/cuadernos.jpg" alt="Cuadernos ecológicos">
+            <img src="https://example.com/lapiz-plantable.jpg" alt="Lápiz plantable">
+            <img src="https://example.com/kit-escolar.jpg" alt="Kit escolar EcoRaíz">
+        </div>
+
+        <h2 id="productos">Productos</h2>
+        <ul>
+            <li>Cuadernos reciclados con contenidos educativos (ODS).</li>
+            <li>Lápices plantables biodegradables con semillas.</li>
+            <li>Campañas escolares de sensibilización ambiental.</li>
+        </ul>
+
+        <h2>¿Por qué elegir EcoRaíz?</h2>
+        <ul>
+            <li>🌍 Impacto ambiental positivo.</li>
+            <li>📚 Educación más consciente y equitativa.</li>
+            <li>💡 Consumo con sentido.</li>
+            <li>🌱 Producto innovador y emocionalmente valioso.</li>
+        </ul>
+
+        <h2>Misión</h2>
+        <p>Proveer kits escolares ecológicos y educativos a más de 1.000 estudiantes en contextos vulnerables antes de diciembre de 2025.</p>
+
+        <h2>Visión</h2>
+        <p>Ser la organización líder en útiles escolares ecológicos con contenido educativo en Argentina para 2030.</p>
+
+        <h2 id="valores">Valores</h2>
+        <ul>
+            <li>Sostenibilidad activa</li>
+            <li>Educación transformadora</li>
+            <li>Inclusión social</li>
+            <li>Innovación con propósito</li>
+            <li>Compromiso comunitario</li>
+        </ul>
+
+        <h2 id="prototipo">Prototipo del Producto</h2>
+        <p><strong>Kit EcoRaíz:</strong></p>
+        <ul>
+            <li>Cuaderno reciclado con infografías ODS</li>
+            <li>Lápiz biodegradable con cápsula de semillas</li>
+            <li>Bolsa compostable con instrucciones</li>
+            <li>Mini guía educativa para docentes</li>
+        </ul>
+
+        <h2 id="contacto">Contacto</h2>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <h2>Redes Sociales</h2>
+        <p><strong>Instagram:</strong> <a href="https://instagram.com/ecoraiz">@ecoraiz</a></p>
+        <p><strong>Página Web:</strong> <a href="https://www.ecoraiz.org">www.ecoraiz.org</a></p>
+
+        <!-- Secciones extra: testimonios, contadores, preguntas frecuentes -->
+        <!-- Las insertamos aquí desde el documento original -->
+    </div>
+
+    <footer>
+        <p>&copy; 2025 EcoRaíz - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
